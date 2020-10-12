@@ -61,8 +61,12 @@ module.exports = (sequelize, DataTypes) => {
     let hash = bcryptjs.hashSync(instance.password, salt)
 
     instance.password = hash
-    instance.role = `customer`
+    if (instance.role !== `admin` || !instance.role){
+      instance.role = `customer`  
+    }
   })
+
+
 
   return User;
 };

@@ -15,30 +15,35 @@ module.exports = {
     {
       email: "admin@mail.com",
       password: "1234",
+      role: "admin",
       createdAt: new Date(),
       updatedAt: new Date()
     },
     {
       email: "putra@mail.com",
       password: "test",
+      role: "customer",
       createdAt: new Date(),
       updatedAt: new Date()
     },
     {
       email: "jack@mail.com",
       password: "bigbenlondon",
+      role: "customer",
       createdAt: new Date(),
       updatedAt: new Date()
     },
     {
       email: "nonail@gmail.com",
       password: "nonene",
+      role: "customer",
       createdAt: new Date(),
       updatedAt: new Date()
     },
     {
       email: "wehsing@hotmail.com",
       password: "singsing",
+      role: "customer",
       createdAt: new Date(),
       updatedAt: new Date()
     }
