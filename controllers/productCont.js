@@ -17,11 +17,12 @@ class ProductController {
 
     static async createProduct(req, res, next) {
         
-        const { name, img_url, price, stock } = req.body
+        const { name, img_url, description, price, stock } = req.body
         try {
             const product = await Product.create({
                 name,
                 img_url,
+                description,
                 price,
                 stock
             })
@@ -35,12 +36,13 @@ class ProductController {
 
     static async updateProduct(req, res, next) {
         
-        const { name, img_url, price, stock } = req.body
+        const { name, img_url, description, price, stock } = req.body
         const { id } = req.params
         try {
             const product = await Product.update({
                 name,
                 img_url,
+                description,
                 price,
                 stock
             },

@@ -12,24 +12,28 @@ let dataProduct = [
   {
     name: "Middle east Sword",
     img_url: "contoh.jpg",
+    description: "A weapon",
     price: 5000,
     stock: 2
   },
   {
     name: "Buckler",
     img_url: "contoh.jpg",
+    description: "A weapon",
     price: 2000,
     stock: 1
   },
   {
     name: "Brandish",
     img_url: "contoh.jpg",
+    description: "A weapon",
     price: 4000,
     stock: 2
   },
   {
     name: "Eastern Sword",
     img_url: "contoh.jpg",
+    description: "A weapon",
     price: 3000,
     stock: 2
   }
@@ -104,6 +108,7 @@ describe('===All test cases===', () => {
         .send({
           name: "Western Sword",
           img_url: "contoh.jpg",
+          description: "A weapon",
           price: 5000,
           stock: 2
         })
@@ -144,6 +149,7 @@ describe('===All test cases===', () => {
         .send({
           name: "Broken Sword",
           img_url: "example.jpg",
+          description: "A weapon",
           price: 5000,
           stock: 2
         })
@@ -256,6 +262,7 @@ describe('===All test cases===', () => {
           .send({
             name: "Western Sword",
             img_url: "contoh.jpg",
+            description: "A weapon",
             price: 5000,
             stock: 2
           })
@@ -277,6 +284,7 @@ describe('===All test cases===', () => {
           .send({
             name: "Western Sword",
             img_url: "contoh.jpg",
+            description: "A weapon",
             price: 5000,
             stock: 2
           })
@@ -298,6 +306,7 @@ describe('===All test cases===', () => {
           .send({
             name: "",
             img_url: "",
+            description: "A weapon",
             price: 5000,
             stock: 2
           })
@@ -319,6 +328,7 @@ describe('===All test cases===', () => {
           .send({
             name: "Dota2 Figure",
             img_url: "example.jpg",
+            description: "A weapon",
             price: 5000,
             stock: -1
           })
@@ -340,6 +350,7 @@ describe('===All test cases===', () => {
           .send({
             name: "Dota2 Figure",
             img_url: "example.jpg",
+            description: "A weapon",
             price: -5000,
             stock: 3
           })
@@ -361,6 +372,7 @@ describe('===All test cases===', () => {
           .send({
             name: "Dota2 Figure",
             img_url: "example.jpg",
+            description: "A weapon",
             price: "Denominated",
             stock: "Free For All"
           })
@@ -384,6 +396,7 @@ describe('===All test cases===', () => {
           .send({
             name: "Western Sword",
             img_url: "contoh.jpg",
+            description: "A weapon",
             price: 5000,
             stock: 2
           })
@@ -405,6 +418,7 @@ describe('===All test cases===', () => {
           .send({
             name: "Western Sword",
             img_url: "contoh.jpg",
+            description: "A weapon",
             price: 5000,
             stock: 2
           })
@@ -426,6 +440,7 @@ describe('===All test cases===', () => {
           .send({
             name: "Dota2 Figure",
             img_url: "example.jpg",
+            description: "A weapon",
             price: 5000,
             stock: -1
           })
@@ -447,6 +462,7 @@ describe('===All test cases===', () => {
           .send({
             name: "Dota2 Figure",
             img_url: "example.jpg",
+            description: "A weapon",
             price: -5000,
             stock: 3
           })
@@ -468,6 +484,7 @@ describe('===All test cases===', () => {
           .send({
             name: "Dota2 Figure",
             img_url: "example.jpg",
+            description: "A weapon",
             price: "Denominated",
             stock: "Free For All"
           })
