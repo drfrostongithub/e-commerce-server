@@ -4,11 +4,26 @@ const { Product } = require(`../models/index`)
 class ProductController {
 
     static async readProduct(req, res, next) {
-        
         try {
             const product = await Product.findAll({
                 order: [['id', 'ASC']]
             })
+            res.status(200).json({ product })
+        } catch (err) {
+            next(err)
+        }
+    }
+
+    static async readProductById(req, res, next){
+        try {
+            const product = await Product.findOne({
+                where: {
+                    id: +req.params.id
+                }
+            })
+            if (product === null){
+                throw { name: `Error not found`} //handle to errorhandle
+            }
             res.status(200).json({ product })
         } catch (err) {
             next(err)
@@ -64,13 +79,11 @@ class ProductController {
     }
 
     static async deleteProducts (req,res,next){
-        
-        const { id } = req.params
         try {
             const product = await Product.destroy(
                 {
                     where: {
-                        id: id
+                        id: +req.params.id
                     }
                 }
             )

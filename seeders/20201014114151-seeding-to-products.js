@@ -1,5 +1,5 @@
 'use strict';
-const fs = require(`fs`)
+const fs = require('fs')
 
 
 module.exports = {
@@ -13,15 +13,15 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    let userGenerate = JSON.parse(fs.readFileSync(`./dataUser.json`, `utf-8`))
+   let productGenerate = JSON.parse(fs.readFileSync(`./dataProduct.json`, `utf-8`))
 
-    let user = userGenerate.map(el => {
+    let product = productGenerate.map(el => {
       el.createdAt = new Date()
       el.updatedAt = new Date()
       return el
     })
 
-    return queryInterface.bulkInsert(`Users`, user, {})
+    return queryInterface.bulkInsert(`Products`, product, {})
   },
 
   down: async (queryInterface, Sequelize) => {
@@ -31,6 +31,5 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    return queryInterface.bulkDelete(`Users`, null, {})
   }
 };

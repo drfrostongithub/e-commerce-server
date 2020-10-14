@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Messer",
+        "img_url": "pedang.jpg",
+        "description": "A weapon",
+        "price": 5000,
+        "stock": 2
+      },
+      {
+        "name": "Regenyei",
+        "img_url": "contoh.jpg",
+        "description": "A weapon",
+        "price": 2000,
+        "stock": 1
+      },
+      {
+        "name": "Glove",
+        "img_url": "contoh.jpg",
+        "description": "Glove",
+        "price": 4000,
+        "stock": 2
+      },
+      {
+        "name": "Pike",
+        "img_url": "Spear.jpg",
+        "description": "Spear",
+        "price": 3000,
+        "stock": 21
+      }
+]

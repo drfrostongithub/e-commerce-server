@@ -1,0 +1,27 @@
+[
+    {
+        "email": "admin@mail.com",
+        "password": "1234",
+        "role": "admin"
+    },
+    {
+        "email": "putra@mail.com",
+        "password": "test",
+        "role": "customer"
+    },
+    {
+        "email": "jack@mail.com",
+        "password": "bigbenlondon",
+        "role": "customer"
+    },
+    {
+        "email": "nonail@gmail.com",
+        "password": "nonene",
+        "role": "customer"
+    },
+    {
+        "email": "wehsing@hotmail.com",
+        "password": "singsing",
+        "role": "customer"
+    }
+]
