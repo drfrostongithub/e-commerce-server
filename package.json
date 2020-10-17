@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest --runInBand --verbose --detectOpenHandles --forceExit"
+    "test": "jest --runInBand --verbose --detectOpenHandles --forceExit",
+    "dev": "npx nodemon http/index.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
