@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --runInBand --verbose --detectOpenHandles --forceExit",
     "dev": "npx nodemon http/index.js",
-    "start": "node app.js"
+    "start": "node http/index.js"
   },
   "repository": {
     "type": "git",
