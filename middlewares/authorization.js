@@ -3,6 +3,7 @@ const { User } = require(`../models`)
 function authorization(req, res, next) {
     User.findOne({
         where: {
+            email: req.decodedUser.email,
             role: "admin"
         }
     })

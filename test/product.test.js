@@ -6,14 +6,12 @@ const fs = require(`fs`)
 const dataUser = JSON.parse(fs.readFileSync(`./dataUser.json`, `utf-8`))
 const dataProduct = JSON.parse(fs.readFileSync(`./dataProduct.json`, `utf-8`))
 
-
 let tokenAdmin
 let tokenCustomer
 let prodId
 
 describe('====Product====', () => {
     beforeAll((done) => {
-        console.log(dataProduct)
         User.bulkCreate(
             dataUser
         )
@@ -37,7 +35,7 @@ describe('====Product====', () => {
                 return Product.bulkCreate(dataProduct, {})
             })
             .then((data) => {
-                return Product.findOne({ where: { name: "Brandish" } })
+                return Product.findOne({ where: { name: "Regenyei" } })
             })
             .then((data) => {
                 console.log(data)

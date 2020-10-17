@@ -1,30 +1,58 @@
 [
-    {
-        "name": "Messer",
-        "img_url": "pedang.jpg",
-        "description": "A weapon",
-        "price": 5000,
-        "stock": 2
-      },
-      {
-        "name": "Regenyei",
-        "img_url": "contoh.jpg",
-        "description": "A weapon",
-        "price": 2000,
-        "stock": 1
-      },
-      {
-        "name": "Glove",
-        "img_url": "contoh.jpg",
-        "description": "Glove",
-        "price": 4000,
-        "stock": 2
-      },
-      {
-        "name": "Pike",
-        "img_url": "Spear.jpg",
-        "description": "Spear",
-        "price": 3000,
-        "stock": 21
-      }
+  {
+    "name": "Messer",
+    "img_url": "https://files.knifecenter.com/knifecenter/coldsteel/images/CS88GMSn.jpg",
+    "description": "A weapon",
+    "price": 5000,
+    "stock": 2
+  },
+  {
+    "name": "Regenyei",
+    "img_url": "https://i1.wp.com/regenyei.com/wp-content/uploads/2020/04/KZ_1030_fechtschwert_05.jpg?resize=600%2C400&ssl=1",
+    "description": "A weapon",
+    "price": 2000,
+    "stock": 1
+  },
+  {
+    "name": "Glove",
+    "img_url": "https://www.ozactivesports.com.au/assets/full/GL03-yellow-M.jpg?20200704030455",
+    "description": "Glove",
+    "price": 4000,
+    "stock": 2
+  },
+  {
+    "name": "Pike",
+    "img_url": "https://cdn.globalauctionplatform.com/7845c05a-8e8f-4104-be58-a8cd00e79910/fbe0d694-12c4-4474-b54a-a8326deaae41/540x360.jpg",
+    "description": "Spear",
+    "price": 3000,
+    "stock": 21
+  },
+  {
+    "name": "Halberd",
+    "img_url": "https://mcishop.azureedge.net/mciassets/w_5_0011738_authentics-european-knights-halberd_550.png",
+    "description": "Lubu would be proud",
+    "price": 5000,
+    "stock": 2
+  },
+  {
+    "name": "Karambit",
+    "img_url": "https://cdn11.bigcommerce.com/s-3gpq9l22/images/stencil/1280x1280/products/1055/9073/A17-BK4931__96139.1554315859.jpg?c=3",
+    "description": "A weapon",
+    "price": 2000,
+    "stock": 1
+  },
+  {
+    "name": "Ak-74",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81zLPEwAJKL._AC_SL1500_.jpg",
+    "description": "Ak 47 out of stock today",
+    "price": 4000,
+    "stock": 2
+  },
+  {
+    "name": "Doujinshi",
+    "img_url": "https://japanesestation.com/wp-content/uploads/2018/08/Doujinshi.jpg",
+    "description": "Not legal in your country",
+    "price": 3000,
+    "stock": 21
+  }
 ]

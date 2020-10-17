@@ -1,6 +1,5 @@
-if (process.env.NODE_ENV == "development"|| process.env.NODE_ENV == "test"){
-    require(`dotenv`).config()
-}
+// if (process.env.NODE_ENV == "development"|| process.env.NODE_ENV == "test")
+require(`dotenv`).config()
 
 const express = require(`express`)
 const cors = require('cors')
@@ -20,8 +19,8 @@ app.use(`/`,router)
 app.use(errrorHandler)
 
 
-// app.listen(port, ()=>{
-//     console.log(`App on http://localhost:${port}`)
-// })
+app.listen(port, ()=>{
+    console.log(`App on http://localhost:${port}`)
+})
 
-module.exports = app
+// module.exports = app

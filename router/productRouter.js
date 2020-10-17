@@ -8,6 +8,7 @@ router.get(`/`, ProductController.readProduct)
 
 router.use(authorization)
 router.post(`/`, ProductController.createProduct)
+router.get(`/:id`, ProductController.readProductById)
 router.put(`/:id`, ProductController.updateProduct)
 router.delete(`/:id`, ProductController.deleteProducts)
 
