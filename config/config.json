@@ -3,14 +3,14 @@
     "username": "postgres",
     "password": "putra",
     "database": "database_development_ecom",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
     "password": "putra",
     "database": "database_test_ecom",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {

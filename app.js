@@ -15,6 +15,7 @@ app.use(express.json())
 //use cors here
 app.use(cors())
 
+console.log(port)
 
 app.use(`/`,router)
 app.use(errrorHandler)
