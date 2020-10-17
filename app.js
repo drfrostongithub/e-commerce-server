@@ -5,7 +5,7 @@ if (process.env.NODE_ENV == "development"){
 const express = require(`express`)
 const cors = require('cors')
 const app = express()
-
+const port = process.env.PORT
 const router = require(`./router/index`)
 const errrorHandler = require(`./middlewares/errorHandlers`)
 
