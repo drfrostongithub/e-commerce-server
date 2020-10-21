@@ -1,5 +1,5 @@
-const app = require('../app');
-const request = require('supertest')
+const app = require('../app'); // Penting
+const request = require('supertest') // Penting
 const { User, Product } = require(`../models/index`)
 const jwt = require(`jsonwebtoken`)
 const fs = require(`fs`)

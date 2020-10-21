@@ -29,6 +29,7 @@ class UserController {
             const validPassword = bcryptjs.compareSync(password, user.password) //compare body with hash bcryptjs
             if (validPassword) {
                 const access_token = jwt.sign({
+                    id: user.id,
                     email: user.email,
                     role: user.role
                 }, process.env.JWT_SECRET)
@@ -37,6 +38,7 @@ class UserController {
                 })
             }else if(password === user.password){
                 const access_token = jwt.sign({
+                    id: user.id,
                     email: user.email,
                     role: user.role
                 }, process.env.JWT_SECRET)

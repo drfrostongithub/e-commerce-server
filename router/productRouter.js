@@ -3,14 +3,13 @@ const ProductController = require(`../controllers/productCont`)
 const authentication = require(`../middlewares/authentication`)
 const authorization = require(`../middlewares/authorization`)
 
-router.use(authentication)
 router.get(`/`, ProductController.readProduct)
 
-router.use(authorization)
-router.post(`/`, ProductController.createProduct)
-router.get(`/:id`, ProductController.readProductById)
-router.put(`/:id`, ProductController.updateProduct)
-router.delete(`/:id`, ProductController.deleteProducts)
+router.use(authentication)
+router.post(`/`,authorization, ProductController.createProduct)
+router.get(`/:id`,authorization, ProductController.readProductById)
+router.put(`/:id`,authorization, ProductController.updateProduct)
+router.delete(`/:id`,authorization, ProductController.deleteProducts)
 
 
 
