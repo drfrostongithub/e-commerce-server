@@ -11,7 +11,7 @@ function authorization(req, res, next) {
             if (user === null) {
                 throw { name: `Unauthorized` }
             } else {
-                if (user.role === req.decodedUser.role) {
+                if (user.role === req.decodedUser.role && user.email === req.decodedUser.email) {
                     next()
                 }
                 else {
