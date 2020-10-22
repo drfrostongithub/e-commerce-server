@@ -1,16 +1,80 @@
-const { Cart, Product } = require(`../models/index`)
+const { Cart, Product, User } = require(`../models/index`)
 
 class CartController {
-
     static async getReadCart(req, res, next) {
-        console.log('msk read cart')
-        console.log(req.decodedUser)
         try {
             const cart = await Cart.findAll({
-                where: { UserId: req.decodedUser.id }
+                where: { UserId: req.decodedUser.id,
+                isPaid: false },
+                include: [Product],
+                order: [['id', 'ASC']]
             })
             res.status(200).json({ cart })
         } catch (err) {
+            next(err)
+        }
+    }
+
+    static async getHistory(req, res, next) {
+        try {
+            const cart = await Cart.findAll({
+                where: {UserId: req.decodedUser.id,
+                        isPaid: true},
+                include: [Product]
+            })
+            res.status(200).json({ cart })
+        } catch (err) {
+            next(err)
+        }
+    }
+
+    static async payCart(req, res, next) {
+        try {
+            const cartSelected = await Cart.findByPk(req.params.id)
+            if (cartSelected === null) {
+                throw { name: `Error not found` }
+            } else {
+                const checkProduct = await Product.findByPk(cartSelected.ProductId)
+                if (checkProduct) {
+                    if (checkProduct.stock >= cartSelected.amount) {
+                        const cart = await Cart.update(
+                            {
+                                isPaid: true
+                            },
+                            {
+                                where: {
+                                    UserId: +req.decodedUser.id,
+                                    id: req.params.id
+                                },
+                                returning: true
+                            }
+                        )
+                        if (cart[0] === 0) {
+                            throw { name: `Error not found` }
+                        } else {
+                            console.log('habis update cart')
+                            const updateProduct = await Product.update(
+                                {
+                                    stock: checkProduct.stock - cartSelected.amount
+                                },
+                                {
+                                where: {id: cartSelected.ProductId},
+                                returning: true
+                            })
+                            console.log('habis update produk')
+                            res.status(200).json({updateProduct})
+                        }
+                    }
+                    else {
+                        throw { name: `Stock isn't enough` }
+                    }
+                }
+                else {
+                    throw { name: `Stock isn't enough` }
+                }
+            }
+        }
+        catch (err) {
             next(err)
         }
     }
@@ -22,7 +86,8 @@ class CartController {
                 const checkCart = await Cart.findOne({
                     where: {
                         UserId: req.decodedUser.id,
-                        ProductId: +req.params.id
+                        ProductId: +req.params.id,
+                        isPaid: false
                     }
                 })
                 if (checkCart) {
