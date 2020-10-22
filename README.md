@@ -530,11 +530,11 @@ role -> default : customer (with hooks before create)
 
 **Edit Patch Cart**
 ----
-  Edit Cart by ID with some element updated.
+  Edit Cart for updating amount.
 
 * **URL**
 
-  /cart/:id
+  /cart/:id/amount
 
 * **Method:**
 
@@ -572,7 +572,41 @@ role -> default : customer (with hooks before create)
   * **Code:** 500 INTERNAL SERVER <br />
     **Content:** `{ error : "Internal Server Error }`
 
+**Edit Patch Cart**
+----
+  Edit Cart for updating paid and sent to history.
 
+* **URL**
+
+  /cart/:id/pay
+
+* **Method:**
+
+  `PATCH`
+  
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** '{
+    "id": 4,
+    "UserId": 2,
+    "ProductId": 4,
+    "amount": 10,
+    "isPaid": true,
+    "createdAt": "2020-10-21T09:27:37.040Z",
+    "updatedAt": "2020-10-21T10:50:21.063Z"
+    }'
+ 
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `{ "msg": "JsonWebTokenError" }`
+
+  OR
+
+  * **Code:** 500 INTERNAL SERVER <br />
+    **Content:** `{ error : "Internal Server Error }`
 
 **Delete Put Cart**
 ----
