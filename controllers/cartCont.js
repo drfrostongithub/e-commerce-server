@@ -139,7 +139,7 @@ class CartController {
             } else {
                 const checkProduct = await Product.findByPk(cartSelected.ProductId)
                 if (checkProduct) {
-                    if (checkProduct.stock >= amount) {
+                    if (checkProduct.stock >= amount && amount > 0) {
                         const cart = await Cart.update(
                             {
                                 amount
@@ -157,6 +157,9 @@ class CartController {
                         } else {
                             res.status(200).json(cart[1][0])
                         }
+                    }
+                    else if (amount < 1) {
+                        throw { name: `Product cannot below 1` }
                     }
                     else {
                         throw { name: `Stock isn't enough` }

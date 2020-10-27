@@ -18,7 +18,15 @@ module.exports = (sequelize, DataTypes) => {
   Cart.init({
     UserId: DataTypes.INTEGER,
     ProductId: DataTypes.INTEGER,
-    amount: DataTypes.INTEGER,
+    amount: {
+      type: DataTypes.INTEGER,
+      validate: {
+        min: {
+          args : [1],
+          msg: `Amount Cannot be lower than 1`
+        }
+      }
+    },
     isPaid: DataTypes.BOOLEAN
   }, {
     sequelize,
