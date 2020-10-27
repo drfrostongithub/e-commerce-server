@@ -21,7 +21,7 @@ module.exports = function errorHandlers(err, req, res, next) {
     }
     else if (err.name === `Unauthorized`|| err.name === "JsonWebTokenError") {
         res.status(401).json({
-            msg: err.name
+            msg: `Unauthorized`
         })
     }
     else if (err.name === `Stock isn't enough`) {
