@@ -25,12 +25,12 @@ module.exports = function errorHandlers(err, req, res, next) {
         })
     }
     else if (err.name === `Product cannot below 1`) {
-        res.status(401).json({
+        res.status(404).json({
             msg: err.name
         })
     }
     else if (err.name === `Stock isn't enough`) {
-        res.status(401).json({
+        res.status(404).json({
             msg: err.name
         })
     }
